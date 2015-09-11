@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alienzzzzz</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var leftSide = $(".alien-left");
+        var rightSide =  $(".alien-right");
+        var spaceship = $(".alien");
+        var currentPosition = spaceship.position().left;
+        
+        $(spaceship).fadeIn(1500); //PART 1
+         
+        $(leftSide).click(function() {
+            spaceship.animate(
+                {left:  (spaceship.position().left +=-100) + 'px'
+            });
+        });
+        
+        $(rightSide).click(function() {
+            spaceship.animate(
+                {left:  (spaceship.position().left +=100) + 'px'
+            }); 
+        });
+    });
+     
+     
+    
+</script>
+
+<style>
+body {
+  background: url('space.jpg') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+img {
+    float: left;
+}
+
+.alien {
+    position: fixed;
+    top:40%;	
+    left: 48%;
+    width: 150px;
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="alien">
+	<img class="alien-left" src="alienL.png"><img class="alien-right" src="alienR.png">
+</div>
+</body>
+</html>
