@@ -1,0 +1,59 @@
+.orders-content {
+    display: inline-block;
+        
+    h6 {
+        color: $gray-dark;  
+        font-weight: 700;
+    }
+    
+    .dropdown {
+        @extend %col-xs-12;
+        @extend %col-md-3;
+        float: left;
+        display: inline-block;
+        border: 1px solid $gray-medium;
+        background-color: $gray-light;
+        
+        @media screen and (max-width: $screen-xs){
+            margin-bottom: 1em;
+        }
+        
+        .dropdown-toggle {
+            color: black;
+            @include font-scale(-1);
+            
+            i{
+                margin-left: 11.1em;
+                
+                @media screen and (max-width: $screen-xs){
+                    margin-left: 9.4em;
+                }
+            }
+        }
+        
+        .dropdown-menu {
+            left: -1px;
+            //top: 21px;
+            border: 1px solid $gray-medium;    
+            border-top: none;
+            @extend %col-md-3;
+            li {
+                
+            }
+
+            a {
+                //padding: .25em 11.9em .25em 1em;
+                @include font-scale(-1);
+                
+                @media screen and (max-width: $screen-xs){
+                    padding-right: 11.1em;
+                }
+            }
+            
+            hr{
+                margin: 0;
+                
+            }
+        }
+    }
+}

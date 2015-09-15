@@ -1,0 +1,34 @@
+.menu {
+    text-align: center;
+    padding: 5em 0;
+    @extend %col-xs-12;
+    color: $font-color;
+   
+    p{
+        font-weight: 700;
+        text-transform: uppercase;
+        @extend %col-lg-4;
+        @include font-scale(1);
+    }
+    
+    .left, .right{
+        @extend %col-xs-12;
+        @extend %col-lg-4;
+        
+        li{
+            list-style: none;
+            margin-bottom: 1em;
+        }
+        
+        span {
+            @include clearfix;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .menu {
+        text-align: left;
+        padding: 5em 0 5em 3em;
+    }
+}

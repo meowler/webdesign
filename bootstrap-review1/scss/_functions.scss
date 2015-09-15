@@ -1,0 +1,30 @@
+@function math-pow($number, $exp) {
+    // Traditional method for integers
+    $value: 1;
+    
+    @if $exp > 0 {
+        @for $i from 1 through $exp {
+           $value: $value * $number;
+        }
+    }
+    @else if $exp < 0 {
+        @for $i from 1 through -$exp {
+            $value: $value / $number;
+        }
+    }
+
+    @return $value;
+}
+
+@function font-calc-em($number, $ratio: $font-ratio){
+
+    @if $number == 0 {
+        @return 1em;
+    }
+    @else if $number < 0 {
+        @return math-pow(1-($ratio), -$number) * 1em;
+    }
+    @else {
+        @return math-pow(1+$ratio, $number) * 1em;
+    }
+}

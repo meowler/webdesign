@@ -1,0 +1,114 @@
+.orders-content{
+    .orderhistory {
+        @extend %col-xs-12;
+        @extend %col-md-offset-1;
+        @extend %col-md-8;
+        @include font-scale(-1);
+        padding: 0;
+        margin-left: 6em;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        float: right;
+
+        tr {
+            @extend %row;
+        }
+
+        thead tr {
+            background: $secondary-light;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+            padding: 1em;
+        }
+
+        tbody {
+
+            tr:nth-of-type(even) {
+                background: $gray-bg-light;
+            }
+
+            td {
+                color: black;
+            }
+        }
+
+        .headerrow {
+            @extend %row;
+            //border-top: 1px solid $border-color;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .order-date {
+            @extend %col-xs-3;
+            @extend %col-md-2;
+        }
+        .order-quantity {
+            @extend %col-xs-3;
+            @extend %col-md-1;
+        }
+        .order-total {
+            @extend %col-xs-3;
+            @extend %col-md-2;
+        }
+        .order-checkout {
+            @extend %col-xs-3;
+            @extend %col-md-1;
+        }
+        .order-items {
+            @extend %col-xs-12;
+            @extend %col-md-3;
+        }
+        .order-unitprice {
+            @extend %col-xs-12;
+            @extend %col-md-1;
+        }
+        .order-type {
+            @extend %col-xs-12;
+            @extend %col-md-2;
+        }
+
+    }
+
+    .details{
+        @extend %col-xs-10;
+        @extend %col-sm-5;
+        @extend %col-xs-push-2;
+        @extend %col-md-push-0;
+        display: none;
+
+        &:before {
+            display: inline-block;
+            width: 20%;
+            font-weight: bold;
+        }
+
+        .headerrow & {
+            @extend %hidden-xs;
+            @extend %hidden-sm;
+        }
+    }
+    .orderhistory .bodyrow {
+        @extend %row;
+        //border-bottom: 1px solid $border-color;
+        //border-right: 1px solid $border-color;
+        //border-left: 1px solid $border-color;
+        margin: 0;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .details {
+        display: block;
+    }
+    
+    .field5, .field6, .field7, .field8 {
+        &:before {
+            display: none;
+        }
+    }
+}

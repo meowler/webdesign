@@ -1,0 +1,41 @@
+.contact {
+    padding: 2em 0 5em;
+    background: none;
+    color: $font-color;
+    display: block;
+    width: 100%;
+    text-align: center;
+    @extend %col-xs-12;
+
+    p {
+        font-weight: 700;
+        text-transform: uppercase;
+        @include font-scale(1);
+        @extend %col-xs-12;
+        @extend %col-lg-4;
+        padding: 1em 0;
+    }
+
+    .left, .right{
+        @extend %col-xs-6;
+        @extend %col-lg-4;
+        
+        li{
+            list-style: none;
+            margin-bottom: 1em;
+            @include font-scale(-1);
+        
+        }
+        
+        li:nth-of-type(odd){
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .contact{
+        padding: 5em 0 5em 3em;
+        text-align: left;
+    }
+}

@@ -1,0 +1,39 @@
+.header{
+    @extend %container-fluid;
+    padding: 0 2em;
+}
+
+.content{
+    @extend %container-fluid;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+.footer{
+   padding: .5em 0;
+}
+
+.content, h1 {
+   @include clearfix;
+}
+
+p{
+  padding: .1em 0;
+}  
+
+a{
+    color: $brand-primary;
+    list-style: black;
+    &:visited{
+        color: &brand-primary-dark;
+    }
+}
+
+li{
+    list-style: none;
+}
+

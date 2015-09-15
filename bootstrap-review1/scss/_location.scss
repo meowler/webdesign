@@ -1,0 +1,39 @@
+.location {
+    padding: 2em 2em 4em;
+    margin-bottom: 0;
+    background-color: $background-color;
+    color: white;
+    display: block;
+    height: auto;
+    @extend %col-xs-12;
+    @extend %col-lg-4;
+
+    p {
+        font-weight: 700;
+        text-transform: uppercase;
+        float: left;
+        @include font-scale(1);
+        @extend %col-lg-12;
+    }
+
+    ul{
+        text-align: right;
+        float: right;
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .location {
+    
+        ul{
+            float: left;
+            text-align: left;
+            padding: 1em 0 12em;
+        }
+    
+        p {
+            padding: 1em 0;
+        }
+    
+    }
+}

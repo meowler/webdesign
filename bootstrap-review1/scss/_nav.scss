@@ -1,0 +1,66 @@
+//
+// Main Navigation
+// --------------------------------------------------
+
+.nav {
+    li a {
+    color: white;
+    text-transform: uppercase;
+    @include font-scale(-2);
+    
+    &:hover,
+    &:active {
+      text-decoration: none;
+      background: none;
+    }
+  }   
+}
+
+.navbar {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    background-color: $background-color;
+    width: 100%;
+
+    ul {
+        float: right;
+        color: white;
+    }
+    
+    li:last-child a{
+        padding-right: 0;
+    }
+}
+
+button{
+    width: auto;
+}   
+    .navbar-toggle{
+        border-radius: .75em;
+        border: 1px solid white;
+        padding: .5em .45em;
+        margin: 1em;
+    
+        .icon-bar{
+            width: 1.75em;
+            height: 1px;
+        }
+        
+    }
+
+
+.navbar-brand {
+    color: white;
+
+    &:hover,
+    &:active {
+        color: white;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .navbar-collapse {
+        padding: 0;
+    }
+}

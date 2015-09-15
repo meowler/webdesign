@@ -1,0 +1,7 @@
+@mixin font-scale($number){
+    font-size: font-calc-em($number);
+}
+
+@mixin margin($margin) {
+  margin: $margin;
+}

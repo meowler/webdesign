@@ -1,0 +1,53 @@
+body{
+    font: {
+        weight: regular;
+        family: $font-stack;
+        color: $font-color;
+    }
+}
+
+.navbar ul{
+    font-weight: 700;   
+}
+
+//%header {}
+
+@for $i from 1 through 6 {
+    h#{$i}{
+        @extend %header !optional;
+        //@include font-scale(7-$i);
+    }
+}
+
+h1{
+    font-weight: 300;
+    color: black;
+    margin: $header-margin 0 ($header-margin * -0.5);
+}
+
+h2{
+    font-weight: 400;
+    color: $brand-primary;
+}
+
+.nav a {
+    @include font-scale(-1);
+}
+
+.subnav .breadcrumb a{
+    @include font-scale(-2);
+    font-weight: 300;
+}
+
+.subnav .account a{
+    @include font-scale(-1);
+    font-weight: normal;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.account-controls{
+    @include font-scale(-1);
+}

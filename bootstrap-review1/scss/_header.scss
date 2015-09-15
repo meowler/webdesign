@@ -1,0 +1,114 @@
+//
+// Header
+// --------------------------------------------------
+
+
+
+
+
+// ACCOUNT CONTROLS
+
+.account-controls{
+    color: white;
+    float: right;
+    
+    > li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 1.25em;
+        float: left;
+        
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    
+    a{
+        margin: 0 0.5em 0 0.5em;
+        color: white;
+    }
+}   
+
+
+
+.account-glyph-cart{
+    &:after{
+        @extend %glyph-shopping-cart;
+        margin-left: .75em;
+        transform: scale(-1.5, 1.5);
+        color: white;
+    }
+}
+.account-glyph-login{
+    &:after{
+        @extend %glyph-triangle-bottom;
+        margin-left: .25em;
+        transform: scale(.75);
+        position: relative;
+        top: .25em;
+    }
+}
+
+.account-summary > a{
+    display: block;
+    color: $secondary;
+    position: relative;
+    
+    i{
+        margin-left: 0.25em;
+        transform: scale(1.1);
+        position: absolute;
+        top: .35em;
+        right: 0.5em;
+        padding-right: .9em;
+        color: $secondary;
+    }  
+}
+
+.dropdown-menu{
+    padding: 0;
+    border-radius: 0;
+    left: -135px;
+    border: none;
+    > li > a{
+        &:hover, 
+        &:active{
+        background-color: $dropdown-link-active-bg;
+        color: black;
+        
+            i{
+                color: $brand-primary; 
+            }
+            
+            .account-name{
+                color: black;
+            }
+        }
+    }
+
+    hr{
+        margin: 0 1em
+    }
+}  
+
+.account-summary{
+    padding: .5em;
+    @include clearfix;
+}
+    
+.account-name{
+    list-style: none;
+    display: inline-block;
+    margin-left: 0;
+    color: $secondary;
+    font-weight: normal;
+    padding: 0 1em 0 0;
+
+    li{
+        margin-left: -.5em;
+        &:first-child{
+        font-weight: 700;
+        }
+        
+    }
+}

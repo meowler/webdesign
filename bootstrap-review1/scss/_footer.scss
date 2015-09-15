@@ -1,0 +1,30 @@
+//
+// Footer
+// --------------------------------------------------
+
+.footer{
+    background-color: $background-color;
+    width: 100%;
+    color: white;
+    margin: 0 0 2em;
+    clear: both;
+    
+    p {
+        font: {
+           size: 0.8125em;
+           weight: 400;
+        }
+        
+        text-transform: none;
+        float: right;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .footer {
+        margin: 0;
+    }
+}
+
+

@@ -1,0 +1,122 @@
+// TYPOGRAPHY
+$font-stack: "Helvetica", Helvetica Neue, Arial, sans-serif;
+$font-size-base: 16px;
+$font-ratio: .15;
+
+$header-margin: 1em;
+
+$font-size-h1: font-calc-em(6);
+$font-size-h2: font-calc-em(5);
+$font-size-h3: font-calc-em(4);
+$font-size-h4: font-calc-em(3);
+$font-size-h5: font-calc-em(2);
+$font-size-h6: font-calc-em(1);
+
+// COLORS 
+$background-color: #666666;
+$font-color: #454545;
+
+
+$brand-primary: #519ABF;
+$brand-primary-light: #86B6D5;
+$brand-primary-dark: #3B7A93;
+
+$secondary: #777777;
+$secondary-light: #939598;
+$secondary-dark: #414042;
+
+$gray-light: #666666;
+$gray-medium: #BFBFBF;
+$gray-dark: #777777;
+
+$gray-bg-light: #E9E9E9;
+
+// NAVIGATION
+$nav-link-hover-bg: #666666;
+$navbar-default-bg: #666666;
+$navbar-default-brand-hover-bg: #666666;
+$navbar-default-link-hover-bg: #666666;
+$navbar-default-link-active-bg: #666666;
+$navbar-default-link-disabled-color: white;
+$navbar-default-link-active-color: white;
+$navbar-default-brand-color: white;
+$navbar-default-color: white;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: white;
+$navbar-default-toggle-icon-bar-bg: white;
+
+$border-radius-base: .75em;
+
+
+// MISC
+$margin: .25em;
+$border-radius: 0;
+
+// Breadcrumbs
+
+$breadcrumb-padding-vertical:   .5em;
+$breadcrumb-padding-horizontal: 1em;
+//** Breadcrumb background color
+$breadcrumb-bg:                 none;
+//** Breadcrumb text color
+$breadcrumb-color:              white;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       white;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          ">";
+
+
+// DROPDOWN
+$dropdown-link-active-bg: #EEEEEE;
+
+// BUTTON
+$btn-font-weight: 700;
+
+// TABLE
+$border-color: #DDDDDD;
+
+// FOOTER
+$footer-separator:          "|";
+
+
+
+
+$actualize:
+    //alerts, 
+    //badges, 
+    breadcrumbs, 
+    buttons, 
+    //carousel, 
+    //close, 
+    //code, 
+    //component-animations, 
+    dropdowns, 
+    //forms, 
+    //glyphicons, 
+    //grid, 
+    //input-groups, 
+    //jumbotron, 
+    //labels, 
+    //list-group, 
+    //media, 
+    //modals, 
+    navbar, 
+    navs, 
+    //pager, 
+    //pagination, 
+    //panels, 
+    //popovers, 
+    //progress-bars, 
+    //responsive-embed, 
+    //responsive-utilities, 
+    //scaffolding, 
+    //tables, 
+    //thumbnails, 
+    //tooltip, 
+    //type, 
+    //utilities, 
+    //wells,
+    end;
+
+
+

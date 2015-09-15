@@ -1,0 +1,21 @@
+// IMAGE        
+img{
+    display: block;
+    width: 100%;
+}
+
+.map{
+    @extend %col-lg-8;
+    padding: 0;
+}
+
+@media screen and (min-width: $screen-lg) {
+    img{
+        display: inline-block;
+    }
+    
+    .map {
+        text-align: left;
+        padding: 0;
+    }
+}

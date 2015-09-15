@@ -1,0 +1,27 @@
+.account-table{
+    border: 1px solid $border-color;
+    border-collapse: collapse;
+    float: left;
+    margin: 2em 0 0 2em;
+    padding: 0;
+    
+    th{
+        color: $brand-primary;
+        padding: .25em .8em;
+    }
+            
+    tr{
+        border-top: 1px solid $border-color;
+    }
+
+    td:first-child{
+        background-color: $gray-bg-light;
+        font-weight: 700;
+    }
+    
+    td{
+        color: black;
+        padding: .25em 2.5em .25em 1em;
+        @include font-scale(-1);
+    }
+}        

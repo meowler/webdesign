@@ -1,0 +1,299 @@
+@at-root {
+  // Import the fonts
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
+         url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff2'), '#{$icon-font-path}#{$icon-font-name}.woff2')) format('woff2'),
+         url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
+         url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.ttf'), '#{$icon-font-path}#{$icon-font-name}.ttf')) format('truetype'),
+         url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+  }
+}
+
+// Catchall baseclass
+@mixin glyph {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $brand-primary;
+}
+
+// Individual icons
+%glyph-asterisk               {@include glyph; content: "\2a"; }
+%glyph-plus                   {@include glyph; content: "\2b"; }
+%glyph-euro,
+%glyph-eur                    {@include glyph; content: "\20ac"; }
+%glyph-minus                  {@include glyph; content: "\2212"; }
+%glyph-cloud                  {@include glyph; content: "\2601"; }
+%glyph-envelope               {@include glyph; content: "\2709"; }
+%glyph-pencil                 {@include glyph; content: "\270f"; }
+%glyph-glass                  {@include glyph; content: "\e001"; }
+%glyph-music                  {@include glyph; content: "\e002"; }
+%glyph-search                 {@include glyph; content: "\e003"; }
+%glyph-heart                  {@include glyph; content: "\e005"; }
+%glyph-star                   {@include glyph; content: "\e006"; }
+%glyph-star-empty             {@include glyph; content: "\e007"; }
+%glyph-user                   {@include glyph; content: "\e008"; }
+%glyph-film                   {@include glyph; content: "\e009"; }
+%glyph-th-large               {@include glyph; content: "\e010"; }
+%glyph-th                     {@include glyph; content: "\e011"; }
+%glyph-th-list                {@include glyph; content: "\e012"; }
+%glyph-ok                     {@include glyph; content: "\e013"; }
+%glyph-remove                 {@include glyph; content: "\e014"; }
+%glyph-zoom-in                {@include glyph; content: "\e015"; }
+%glyph-zoom-out               {@include glyph; content: "\e016"; }
+%glyph-off                    {@include glyph; content: "\e017"; }
+%glyph-signal                 {@include glyph; content: "\e018"; }
+%glyph-cog                    {@include glyph; content: "\e019"; }
+%glyph-trash                  {@include glyph; content: "\e020"; }
+%glyph-home                   {@include glyph; content: "\e021"; }
+%glyph-file                   {@include glyph; content: "\e022"; }
+%glyph-time                   {@include glyph; content: "\e023"; }
+%glyph-road                   {@include glyph; content: "\e024"; }
+%glyph-download-alt           {@include glyph; content: "\e025"; }
+%glyph-download               {@include glyph; content: "\e026"; }
+%glyph-upload                 {@include glyph; content: "\e027"; }
+%glyph-inbox                  {@include glyph; content: "\e028"; }
+%glyph-play-circle            {@include glyph; content: "\e029"; }
+%glyph-repeat                 {@include glyph; content: "\e030"; }
+%glyph-refresh                {@include glyph; content: "\e031"; }
+%glyph-list-alt               {@include glyph; content: "\e032"; }
+%glyph-lock                   {@include glyph; content: "\e033"; }
+%glyph-flag                   {@include glyph; content: "\e034"; }
+%glyph-headphones             {@include glyph; content: "\e035"; }
+%glyph-volume-off             {@include glyph; content: "\e036"; }
+%glyph-volume-down            {@include glyph; content: "\e037"; }
+%glyph-volume-up              {@include glyph; content: "\e038"; }
+%glyph-qrcode                 {@include glyph; content: "\e039"; }
+%glyph-barcode                {@include glyph; content: "\e040"; }
+%glyph-tag                    {@include glyph; content: "\e041"; }
+%glyph-tags                   {@include glyph; content: "\e042"; }
+%glyph-book                   {@include glyph; content: "\e043"; }
+%glyph-bookmark               {@include glyph; content: "\e044"; }
+%glyph-print                  {@include glyph; content: "\e045"; }
+%glyph-camera                 {@include glyph; content: "\e046"; }
+%glyph-font                   {@include glyph; content: "\e047"; }
+%glyph-bold                   {@include glyph; content: "\e048"; }
+%glyph-italic                 {@include glyph; content: "\e049"; }
+%glyph-text-height            {@include glyph; content: "\e050"; }
+%glyph-text-width             {@include glyph; content: "\e051"; }
+%glyph-align-left             {@include glyph; content: "\e052"; }
+%glyph-align-center           {@include glyph; content: "\e053"; }
+%glyph-align-right            {@include glyph; content: "\e054"; }
+%glyph-align-justify          {@include glyph; content: "\e055"; }
+%glyph-list                   {@include glyph; content: "\e056"; }
+%glyph-indent-left            {@include glyph; content: "\e057"; }
+%glyph-indent-right           {@include glyph; content: "\e058"; }
+%glyph-facetime-video         {@include glyph; content: "\e059"; }
+%glyph-picture                {@include glyph; content: "\e060"; }
+%glyph-map-marker             {@include glyph; content: "\e062"; }
+%glyph-adjust                 {@include glyph; content: "\e063"; }
+%glyph-tint                   {@include glyph; content: "\e064"; }
+%glyph-edit                   {@include glyph; content: "\e065"; }
+%glyph-share                  {@include glyph; content: "\e066"; }
+%glyph-check                  {@include glyph; content: "\e067"; }
+%glyph-move                   {@include glyph; content: "\e068"; }
+%glyph-step-backward          {@include glyph; content: "\e069"; }
+%glyph-fast-backward          {@include glyph; content: "\e070"; }
+%glyph-backward               {@include glyph; content: "\e071"; }
+%glyph-play                   {@include glyph; content: "\e072"; }
+%glyph-pause                  {@include glyph; content: "\e073"; }
+%glyph-stop                   {@include glyph; content: "\e074"; }
+%glyph-forward                {@include glyph; content: "\e075"; }
+%glyph-fast-forward           {@include glyph; content: "\e076"; }
+%glyph-step-forward           {@include glyph; content: "\e077"; }
+%glyph-eject                  {@include glyph; content: "\e078"; }
+%glyph-chevron-left           {@include glyph; content: "\e079"; }
+%glyph-chevron-right          {@include glyph; content: "\e080"; }
+%glyph-plus-sign              {@include glyph; content: "\e081"; }
+%glyph-minus-sign             {@include glyph; content: "\e082"; }
+%glyph-remove-sign            {@include glyph; content: "\e083"; }
+%glyph-ok-sign                {@include glyph; content: "\e084"; }
+%glyph-question-sign          {@include glyph; content: "\e085"; }
+%glyph-info-sign              {@include glyph; content: "\e086"; }
+%glyph-screenshot             {@include glyph; content: "\e087"; }
+%glyph-remove-circle          {@include glyph; content: "\e088"; }
+%glyph-ok-circle              {@include glyph; content: "\e089"; }
+%glyph-ban-circle             {@include glyph; content: "\e090"; }
+%glyph-arrow-left             {@include glyph; content: "\e091"; }
+%glyph-arrow-right            {@include glyph; content: "\e092"; }
+%glyph-arrow-up               {@include glyph; content: "\e093"; }
+%glyph-arrow-down             {@include glyph; content: "\e094"; }
+%glyph-share-alt              {@include glyph; content: "\e095"; }
+%glyph-resize-full            {@include glyph; content: "\e096"; }
+%glyph-resize-small           {@include glyph; content: "\e097"; }
+%glyph-exclamation-sign       {@include glyph; content: "\e101"; }
+%glyph-gift                   {@include glyph; content: "\e102"; }
+%glyph-leaf                   {@include glyph; content: "\e103"; }
+%glyph-fire                   {@include glyph; content: "\e104"; }
+%glyph-eye-open               {@include glyph; content: "\e105"; }
+%glyph-eye-close              {@include glyph; content: "\e106"; }
+%glyph-warning-sign           {@include glyph; content: "\e107"; }
+%glyph-plane                  {@include glyph; content: "\e108"; }
+%glyph-calendar               {@include glyph; content: "\e109"; }
+%glyph-random                 {@include glyph; content: "\e110"; }
+%glyph-comment                {@include glyph; content: "\e111"; }
+%glyph-magnet                 {@include glyph; content: "\e112"; }
+%glyph-chevron-up             {@include glyph; content: "\e113"; }
+%glyph-chevron-down           {@include glyph; content: "\e114"; }
+%glyph-retweet                {@include glyph; content: "\e115"; }
+%glyph-shopping-cart          {@include glyph; content: "\e116"; }
+%glyph-folder-close           {@include glyph; content: "\e117"; }
+%glyph-folder-open            {@include glyph; content: "\e118"; }
+%glyph-resize-vertical        {@include glyph; content: "\e119"; }
+%glyph-resize-horizontal      {@include glyph; content: "\e120"; }
+%glyph-hdd                    {@include glyph; content: "\e121"; }
+%glyph-bullhorn               {@include glyph; content: "\e122"; }
+%glyph-bell                   {@include glyph; content: "\e123"; }
+%glyph-certificate            {@include glyph; content: "\e124"; }
+%glyph-thumbs-up              {@include glyph; content: "\e125"; }
+%glyph-thumbs-down            {@include glyph; content: "\e126"; }
+%glyph-hand-right             {@include glyph; content: "\e127"; }
+%glyph-hand-left              {@include glyph; content: "\e128"; }
+%glyph-hand-up                {@include glyph; content: "\e129"; }
+%glyph-hand-down              {@include glyph; content: "\e130"; }
+%glyph-circle-arrow-right     {@include glyph; content: "\e131"; }
+%glyph-circle-arrow-left      {@include glyph; content: "\e132"; }
+%glyph-circle-arrow-up        {@include glyph; content: "\e133"; }
+%glyph-circle-arrow-down      {@include glyph; content: "\e134"; }
+%glyph-globe                  {@include glyph; content: "\e135"; }
+%glyph-wrench                 {@include glyph; content: "\e136"; }
+%glyph-tasks                  {@include glyph; content: "\e137"; }
+%glyph-filter                 {@include glyph; content: "\e138"; }
+%glyph-briefcase              {@include glyph; content: "\e139"; }
+%glyph-fullscreen             {@include glyph; content: "\e140"; }
+%glyph-dashboard              {@include glyph; content: "\e141"; }
+%glyph-paperclip              {@include glyph; content: "\e142"; }
+%glyph-heart-empty            {@include glyph; content: "\e143"; }
+%glyph-link                   {@include glyph; content: "\e144"; }
+%glyph-phone                  {@include glyph; content: "\e145"; }
+%glyph-pushpin                {@include glyph; content: "\e146"; }
+%glyph-usd                    {@include glyph; content: "\e148"; }
+%glyph-gbp                    {@include glyph; content: "\e149"; }
+%glyph-sort                   {@include glyph; content: "\e150"; }
+%glyph-sort-by-alphabet       {@include glyph; content: "\e151"; }
+%glyph-sort-by-alphabet-alt   {@include glyph; content: "\e152"; }
+%glyph-sort-by-order          {@include glyph; content: "\e153"; }
+%glyph-sort-by-order-alt      {@include glyph; content: "\e154"; }
+%glyph-sort-by-attributes     {@include glyph; content: "\e155"; }
+%glyph-sort-by-attributes-alt {@include glyph; content: "\e156"; }
+%glyph-unchecked              {@include glyph; content: "\e157"; }
+%glyph-expand                 {@include glyph; content: "\e158"; }
+%glyph-collapse-down          {@include glyph; content: "\e159"; }
+%glyph-collapse-up            {@include glyph; content: "\e160"; }
+%glyph-log-in                 {@include glyph; content: "\e161"; }
+%glyph-flash                  {@include glyph; content: "\e162"; }
+%glyph-log-out                {@include glyph; content: "\e163"; }
+%glyph-new-window             {@include glyph; content: "\e164"; }
+%glyph-record                 {@include glyph; content: "\e165"; }
+%glyph-save                   {@include glyph; content: "\e166"; }
+%glyph-open                   {@include glyph; content: "\e167"; }
+%glyph-saved                  {@include glyph; content: "\e168"; }
+%glyph-import                 {@include glyph; content: "\e169"; }
+%glyph-export                 {@include glyph; content: "\e170"; }
+%glyph-send                   {@include glyph; content: "\e171"; }
+%glyph-floppy-disk            {@include glyph; content: "\e172"; }
+%glyph-floppy-saved           {@include glyph; content: "\e173"; }
+%glyph-floppy-remove          {@include glyph; content: "\e174"; }
+%glyph-floppy-save            {@include glyph; content: "\e175"; }
+%glyph-floppy-open            {@include glyph; content: "\e176"; }
+%glyph-credit-card            {@include glyph; content: "\e177"; }
+%glyph-transfer               {@include glyph; content: "\e178"; }
+%glyph-cutlery                {@include glyph; content: "\e179"; }
+%glyph-header                 {@include glyph; content: "\e180"; }
+%glyph-compressed             {@include glyph; content: "\e181"; }
+%glyph-earphone               {@include glyph; content: "\e182"; }
+%glyph-phone-alt              {@include glyph; content: "\e183"; }
+%glyph-tower                  {@include glyph; content: "\e184"; }
+%glyph-stats                  {@include glyph; content: "\e185"; }
+%glyph-sd-video               {@include glyph; content: "\e186"; }
+%glyph-hd-video               {@include glyph; content: "\e187"; }
+%glyph-subtitles              {@include glyph; content: "\e188"; }
+%glyph-sound-stereo           {@include glyph; content: "\e189"; }
+%glyph-sound-dolby            {@include glyph; content: "\e190"; }
+%glyph-sound-5-1              {@include glyph; content: "\e191"; }
+%glyph-sound-6-1              {@include glyph; content: "\e192"; }
+%glyph-sound-7-1              {@include glyph; content: "\e193"; }
+%glyph-copyright-mark         {@include glyph; content: "\e194"; }
+%glyph-registration-mark      {@include glyph; content: "\e195"; }
+%glyph-cloud-download         {@include glyph; content: "\e197"; }
+%glyph-cloud-upload           {@include glyph; content: "\e198"; }
+%glyph-tree-conifer           {@include glyph; content: "\e199"; }
+%glyph-tree-deciduous         {@include glyph; content: "\e200"; }
+%glyph-cd                     {@include glyph; content: "\e201"; }
+%glyph-save-file              {@include glyph; content: "\e202"; }
+%glyph-open-file              {@include glyph; content: "\e203"; }
+%glyph-level-up               {@include glyph; content: "\e204"; }
+%glyph-copy                   {@include glyph; content: "\e205"; }
+%glyph-paste                  {@include glyph; content: "\e206"; }
+// The following 2 Glyphicons are omitted for the time being because
+// they currently use Unicode codepoints that are outside the
+// Basic Multilingual Plane (BMP). Older buggy versions of WebKit can't handle
+// non-BMP codepoints in CSS string escapes, and thus can't display these two icons.
+// Notably, the bug affects some older versions of the Android Browser.
+// More info: https://github.com/twbs/bootstrap/issues/10106
+// .glyph-door                   { &:before { content: "\1f6aa"; } }
+// .glyph-key                    { &:before { content: "\1f511"; } }
+%glyph-alert                  {@include glyph; content: "\e209"; }
+%glyph-equalizer              {@include glyph; content: "\e210"; }
+%glyph-king                   {@include glyph; content: "\e211"; }
+%glyph-queen                  {@include glyph; content: "\e212"; }
+%glyph-pawn                   {@include glyph; content: "\e213"; }
+%glyph-bishop                 {@include glyph; content: "\e214"; }
+%glyph-knight                 {@include glyph; content: "\e215"; }
+%glyph-baby-formula           {@include glyph; content: "\e216"; }
+%glyph-tent                   {@include glyph; content: "\26fa"; }
+%glyph-blackboard             {@include glyph; content: "\e218"; }
+%glyph-bed                    {@include glyph; content: "\e219"; }
+%glyph-apple                  {@include glyph; content: "\f8ff"; }
+%glyph-erase                  {@include glyph; content: "\e221"; }
+%glyph-hourglass              {@include glyph; content: "\231b"; }
+%glyph-lamp                   {@include glyph; content: "\e223"; }
+%glyph-duplicate              {@include glyph; content: "\e224"; }
+%glyph-piggy-bank             {@include glyph; content: "\e225"; }
+%glyph-scissors               {@include glyph; content: "\e226"; }
+%glyph-bitcoin                {@include glyph; content: "\e227"; }
+%glyph-btc                    {@include glyph; content: "\e227"; }
+%glyph-xbt                    {@include glyph; content: "\e227"; }
+%glyph-yen                    {@include glyph; content: "\00a5"; }
+%glyph-jpy                    {@include glyph; content: "\00a5"; }
+%glyph-ruble                  {@include glyph; content: "\20bd"; }
+%glyph-rub                    {@include glyph; content: "\20bd"; }
+%glyph-scale                  {@include glyph; content: "\e230"; }
+%glyph-ice-lolly              {@include glyph; content: "\e231"; }
+%glyph-ice-lolly-tasted       {@include glyph; content: "\e232"; }
+%glyph-education              {@include glyph; content: "\e233"; }
+%glyph-option-horizontal      {@include glyph; content: "\e234"; }
+%glyph-option-vertical        {@include glyph; content: "\e235"; }
+%glyph-menu-hamburger         {@include glyph; content: "\e236"; }
+%glyph-modal-window           {@include glyph; content: "\e237"; }
+%glyph-oil                    {@include glyph; content: "\e238"; }
+%glyph-grain                  {@include glyph; content: "\e239"; }
+%glyph-sunglasses             {@include glyph; content: "\e240"; }
+%glyph-text-size              {@include glyph; content: "\e241"; }
+%glyph-text-color             {@include glyph; content: "\e242"; }
+%glyph-text-background        {@include glyph; content: "\e243"; }
+%glyph-object-align-top       {@include glyph; content: "\e244"; }
+%glyph-object-align-bottom    {@include glyph; content: "\e245"; }
+%glyph-object-align-horizontal{@include glyph; content: "\e246"; }
+%glyph-object-align-left      {@include glyph; content: "\e247"; }
+%glyph-object-align-vertical  {@include glyph; content: "\e248"; }
+%glyph-object-align-right     {@include glyph; content: "\e249"; }
+%glyph-triangle-right         {@include glyph; content: "\e250"; }
+%glyph-triangle-left          {@include glyph; content: "\e251"; }
+%glyph-triangle-bottom        {@include glyph; content: "\e252"; }
+%glyph-triangle-top           {@include glyph; content: "\e253"; }
+%glyph-console                {@include glyph; content: "\e254"; }
+%glyph-superscript            {@include glyph; content: "\e255"; }
+%glyph-subscript              {@include glyph; content: "\e256"; }
+%glyph-menu-left              {@include glyph; content: "\e257"; }
+%glyph-menu-right             {@include glyph; content: "\e258"; }
+%glyph-menu-down              {@include glyph; content: "\e259"; }
+%glyph-menu-up                {@include glyph; content: "\e260"; }
